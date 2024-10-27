@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/844c4b8fb5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/poster.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Task</title>
 </head>
 <body>
 
     <div class="container">
-
         <div class="movie-card">
             <h2 class="movie-title">free guy (2021)</h2>
             <p class="movie-genres">
@@ -20,15 +20,13 @@
                 <span class="movie-duration">1h 55m</span>
             </p>
             <div class="movie-poster-container">
-                <img src="images/freeGuy.jpg" alt="Free Guy Poster">
+                <img src="images/freeGuy.jpg" alt="Free Guy Poster" class="movie-poster">
             </div>
 
             <div class="movie-info-container">
                 <p class="movie-info-quote">Life's too short to be a background character.</p>
-
                 <h2 class="movie-info-overview-title">overview</h2>
                 <p class="movie-info-overview">A bank teller called Guy realizes he is a background character in an open world video game called Free City that will soon go offline.</p>
-
                 <div class="movie-info-actions">
                     <ul>
                         <li><a href="#" class="add-fav"><i class="fas fa-heart"></i></a></li>
@@ -39,23 +37,25 @@
             </div>
         </div>
 
+        
+        <div id="myModal" class="modal">
+            <div class="model-contet">
+                <span class="closeBtn">&times;</span>
+                <img src="" alt="Movie Poster" class="movie-poster-model">
+                <h1>Free Guy! (2021)</h1>
+            </div>
+        </div>
+
         <footer>
             <h3>Find me to discuss the movie</h3>
-             
             <ul>
-                <li> <a href="#">X <i class="fa-brands fa-square-x-twitter"></i></a></li>
-                <li> <a href="#">Instagram <i class="fa-brands fa-square-instagram"></i></a> </li>
-                <li> <a href="#">Facebook <i class="fa-brands fa-square-facebook"></i></a> </li>
+                <li><a href="#">X <i class="fa-brands fa-square-x-twitter"></i></a></li>
+                <li><a href="#">Instagram <i class="fa-brands fa-square-instagram"></i></a></li>
+                <li><a href="#">Facebook <i class="fa-brands fa-square-facebook"></i></a></li>
             </ul>
-            <
-                      
-    
             <p>K. Magi &#169; 2022</p>
-    
         </footer>
-
-
     </div>
-    
+    <script src="scripts/app.js"></script>
 </body>
 </html>
