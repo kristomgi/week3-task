@@ -1,17 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
 
+/* Universal Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    align-items: center;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make sure the body takes the full height of the viewport */
+}
+
+/* General Styling */
 html {
     font-family: 'Roboto', sans-serif;
     color: #151515;
 }
 
+/* Container for layout */
+.container {
+    width: 75%;
+    text-align: center;
+    margin: 3rem auto;  
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures container takes full height */
+}
+
+/* Movie Card */
 .movie-card {
     margin-top: 5rem;
     height: 800px;
@@ -107,8 +127,9 @@ html {
     justify-content: center;
 }
 
+/* Footer Styling */
 footer {
-    margin-top: 2rem;
+    margin-top: auto; /* Pushes footer to the bottom of the page */
     text-align: center;
     color: #777;
     opacity: 0;
@@ -176,4 +197,52 @@ footer ul li a {
 
 .movie-poster-model {
     width: 300px;
+}
+
+/* Carousel Styles */
+.carousel {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel img {
+    width: 100%;
+}
+
+.carousel .carousel__item,
+.carousel .carousel__item--hidden {
+    display: none;
+}
+
+.carousel .carousel__item--visible {
+    display: block;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.carousel .carousel__actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel__actions button {
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    background-color: rgba(151, 160, 180, 0.63);
+    font-size: 2rem;
+    color: white;
+    margin: 0.5rem;
 }
